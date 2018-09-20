@@ -1,0 +1,17 @@
+body {
+  max-width: 80ch;
+  margin: auto;
+}
+
+body > nav, body > section, body > article, body > footer {
+  border-top: 1px solid grey;
+}
+
+header, nav, section, article, footer {
+  padding: .4em .6em;
+}
+
+/* make horizontal rules from posts and pages lighter and thicker than
+ * those from the theme
+ */
+section hr, article hr {}

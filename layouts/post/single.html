@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article>
+  <header>
+    <h2>{{ .Title }}</h2>
+    <p>Published {{ .PublishDate.Format "Jan 2, 2006" }}</p>
+  </header>
+  {{ .Content }}
+  <footer>
+    <p>Last modified: {{ .Lastmod.Format "Jan 2, 2006"}}</p>
+    <nav>
+      <p>
+        {{ with .NextInSection }}
+        Newer: <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{end}}
+      </p>
+      <p>{{ with .PrevInSection }}
+        Older: <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{end}}
+      </p>
+    </nav>
+  </footer>
+</article>
+{{ end }}

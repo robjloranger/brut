@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section>
+  <h2><a href="{{ .Params.Project_Url }}">{{ .Title }}</a></h2>
+  <h3>{{ .Description }}</h3>
+  <section>
+    {{ .Content }}
+    <p>The project stack is: {{ delimit .Params.Project_Stack ", " " and " }}. The source code is {{ if .Params.Project_Opensource }}Open{{else}}Closed{{end}}.</p>
+  </section>
+  <footer>
+    <p>I started working on this around {{ dateFormat "Jan 2, 2006" .Params.Project_Date }} and {{ if .Params.Project_Ongoing }}am still active{{else}}have since stopped{{end}}.</p>
+    <p><a href="{{ .Params.Project_Url }}">Project Link</a></p>
+  </footer>
+</section>
+{{ end }}

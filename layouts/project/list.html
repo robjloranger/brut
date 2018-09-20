@@ -1,0 +1,10 @@
+{{ define "main" }}
+<header>
+  {{.Content}}
+</header>
+<section>
+  {{ range (where .Pages "Section" "project") }}
+  {{ .Render "summary" }}
+  {{end}}
+</section>
+{{end}}

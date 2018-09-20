@@ -1,0 +1,10 @@
+<article>
+  <header>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Date.Format "Mon, Jan 2, 2006" }} - by {{ if .Params.Authorname }}{{ .Params.Authorname}}{{else}}{{ .Site.Params.Authorname }}{{end}}</p>
+  </header>
+  {{ .Summary }}
+  <footer>
+    <a href="{{ .Permalink }}"><nobr>Read more →</nobr></a>
+  </footer>
+</article>

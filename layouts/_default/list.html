@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section>
+  {{ range .Paginator.Pages }}
+  <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+  {{ end }}
+  <footer>
+    <nav>
+      <p>{{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}">View previous page</a>{{end}}
+        {{ if (and .Paginator.HasPrev) .Paginator.HasNext }} | {{end}}
+        {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}">View next page</a>{{end}}
+      </p>
+    </nav>
+  </footer>
+</section>
+{{ end }}

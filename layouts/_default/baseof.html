@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  {{- block "head" . -}}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="{{ .Site.Params.Authorfullname }}">
+    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{else}}{{ .Description }}{{end}}">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="">
+    <title>{{ .Site.Params.Title }}{{ if not .IsHome }} | {{ .Title }}{{end}}</title>
+    <base href="{{ .Site.BaseURL }}">
+
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+  </head>
+  {{- end -}}
+    <body>
+      {{- block "header" . -}}
+      <header>
+        <h1>{{ .Site.Params.Title }}</h1>
+        <h4>{{ .Site.Params.Tagline }}</h4>
+      </header>
+      <nav>
+        <!-- consider cool text adventure navigation -->
+        <p>
+          <a href="/">Home</a>
+          &nbsp;&#124;&nbsp;
+          <a href="/project">Projects</a>
+          &nbsp;&#124;&nbsp;
+          <a href="/post">Posts</a>
+          &nbsp;&#124;&nbsp;
+          <a href="/about">About</a>
+        </p>
+      </nav>
+      {{- end -}}
+      {{- block "main" . }}{{- end }}
+      {{- block "footer" . -}}
+      <footer>
+        <address>
+          <p>
+            Code with me: <a href="{{ .Site.Params.Github }}">on GitHub</a> -
+            Talk to me: <a href="mailto://{{ .Site.Params.Email }}">with the original social network</a>
+          </p>
+        </address>
+        <p><small>This page was generated using Brut for <a href="https://gohugo.io">Hugo</a> and content is copyright &copy;2018 by {{ .Site.Params.Authorfullname }}</small></p>
+      </footer>
+      {{- end -}}
+    </body>
+</html>
