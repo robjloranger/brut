@@ -10,3 +10,5 @@ TODO:
 + accessibility
 
 This theme is designed for [Hugo](https://gohugo.io) version `0.48` or greater.
+
+For live example see my [homepage](https://robjloranger.ca).
