@@ -1,10 +1,10 @@
-<article>
+<article itemscope itemtype="http://schema.org/BlogPosting">
   <header>
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <p>{{ .Date.Format "Mon, Jan 2, 2006" }} - by {{ if .Params.Authorname }}{{ .Params.Authorname}}{{else}}{{ .Site.Params.Authorname }}{{end}}</p>
+    <h3 itemprop="name headline"><a itemprop="mainEntityOfPage url" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p><time itemprop="datePublished" content="{{ .PublishDate.Format "2006-02-01" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time> - by <span itemprop="author">{{ if .Params.Authorname }}{{ .Params.Authorname}}{{else}}{{ .Site.Params.Authorname }}{{end}}</span></p>
   </header>
-  {{ .Summary }}
+  <div itemprop="description">{{ .Summary }}</div>
   <footer>
-    <a href="{{ .Permalink }}"><nobr>Read more →</nobr></a>
+    <a itemprop="url" href="{{ .Permalink }}" aria-label="Read more about '{{ .Title }}'"><nobr>Read more →</nobr></a>
   </footer>
 </article>
