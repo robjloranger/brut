@@ -4,8 +4,8 @@
 > This is a heavy work in progress for my personal site.
 
 TODO:
-+ css for code blocks and block quotes
-+ micro data
++ css for code blocks and block quotes [Issue #1](https://github.com/robjloranger/brut/issues/1)
++ micro data [Issue #2](https://github.com/robjloranger/brut/issues/2)
 + better semantic markup
 + accessibility
 
