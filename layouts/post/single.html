@@ -1,12 +1,14 @@
 {{ define "main" }}
-<article>
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
-    <h2>{{ .Title }}</h2>
-    <p>Published {{ .PublishDate.Format "Jan 2, 2006" }}</p>
+    <h2 itemprop="name headline">{{ .Title }}</h2>
+    <p>Published <time itemprop="datePublished" content="{{ .PublishDate.Format "2006-02-01" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time></p>
   </header>
-  {{ .Content }}
+  <main itemprop="articleBody">
+    {{ .Content }}
+  </main>
   <footer>
-    <p>Last modified: {{ .Lastmod.Format "Jan 2, 2006"}}</p>
+    <p>Last modified: <time itemprop="dateModified" content="{{ .PublishDate.Format "2006-02-01" }}">{{ .Lastmod.Format "Jan 2, 2006"}}</time></p>
     <nav>
       <p>
         {{ with .NextInSection }}

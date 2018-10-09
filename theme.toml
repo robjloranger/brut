@@ -7,6 +7,7 @@ tags = ["minimal", "clean", "semantic", "programming"]
 features = ["pagination"]
 version = "0.1.0"
 min_version = "0.41"
+lang = "en"
 
 [author]
   name = "rob j loranger"
