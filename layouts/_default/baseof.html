@@ -24,12 +24,12 @@
         <!-- consider cool text adventure navigation -->
         <p>
           <a href="/">Home</a>
-          &nbsp;&#124;&nbsp;
-          <a href="/project">Projects</a>
-          &nbsp;&#124;&nbsp;
-          <a href="/post">Posts</a>
-          &nbsp;&#124;&nbsp;
-          <a href="/about">About</a>
+          {{ range .Site.Menus.main }}
+            &nbsp;&#124;&nbsp;
+            <a href="{{ .URL }}">
+              <span>{{ .Title }}</span>
+            </a>
+          {{ end }}
         </p>
       </nav>
       {{- end -}}
