@@ -1,12 +1,12 @@
 {{ define "main" }}
-<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+<section itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     <h2 itemprop="name headline">{{ .Title }}</h2>
     <p>Published <time itemprop="datePublished" content="{{ .PublishDate.Format "2006-02-01" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time></p>
   </header>
-  <main itemprop="articleBody">
+  <article itemprop="articleBody">
     {{ .Content }}
-  </main>
+  </article>
   <footer>
     <p>Last modified: <time itemprop="dateModified" content="{{ .PublishDate.Format "2006-02-01" }}">{{ .Lastmod.Format "Jan 2, 2006"}}</time></p>
     <nav>
@@ -21,5 +21,5 @@
       </p>
     </nav>
   </footer>
-</article>
+</section>
 {{ end }}

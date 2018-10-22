@@ -1,10 +1,10 @@
-<article itemscope itemtype="http://schema.org/BlogPosting">
+<section itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     <h3 itemprop="name headline"><a itemprop="mainEntityOfPage url" href="{{ .Permalink }}">{{ .Title }}</a></h3>
     <p><time itemprop="datePublished" content="{{ .PublishDate.Format "2006-02-01" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time> - by <span itemprop="author">{{ if .Params.Authorname }}{{ .Params.Authorname}}{{else}}{{ .Site.Params.Authorname }}{{end}}</span></p>
   </header>
-  <div itemprop="description">{{ .Summary }}</div>
+  <article itemprop="description">{{ .Summary }}</article>
   <footer>
     <a itemprop="url" href="{{ .Permalink }}" aria-label="Read more about '{{ .Title }}'"><nobr>Read more →</nobr></a>
   </footer>
-</article>
+</section>
