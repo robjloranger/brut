@@ -5,8 +5,8 @@ description = "A very minimal brutalist theme for hugo"
 homepage = "https://robloranger.ca/brut"
 tags = ["minimal", "clean", "semantic", "programming"]
 features = ["pagination"]
-version = "0.1.0"
-min_version = "0.41"
+version = "0.1.1"
+min_version = "0.40"
 lang = "en"
 
 [author]
